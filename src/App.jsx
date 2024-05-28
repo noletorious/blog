@@ -13,8 +13,15 @@ function App() {
         <img src={viteLogo} className="logo" alt="Vite logo" />
         <img src={reactLogo} className="logo" alt="React logo" />
       </a>
-      {/* // Write code that pulls in the imported button above, then when clicked increment the count and display it  */}
-      <Button onClick={() => setCount(count + 1)}>Increment</Button>
+      {/* Fix the button below   */}
+      <Button
+        onClick={() => {
+          console.log(count);
+          setCount((count) => count + 1);
+        }}
+      >
+        Increment
+      </Button>
       <p>count is: {count}</p>
       <p>What?</p>
     </>

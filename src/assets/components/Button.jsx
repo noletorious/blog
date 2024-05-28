@@ -1,6 +1,4 @@
-export default function Button({ props }) {
-  // Write css here and apply it on the button
-
+export default function Button({ onClick, children }) {
   const buttonStyles = {
     color: "white",
     backgroundColor: "blue",
@@ -10,8 +8,8 @@ export default function Button({ props }) {
   };
 
   return (
-    <button style={buttonStyles} {...props}>
-      Click me
+    <button style={buttonStyles} onClick={onClick}>
+      {children}
     </button>
   );
 }
